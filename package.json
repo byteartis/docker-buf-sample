@@ -7,9 +7,6 @@
     "gen/js/*",
     "defs/*"
   ],
-  "scripts": {
-    "build": "make -s gen"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/byteartis/docker-buf-sample.git"

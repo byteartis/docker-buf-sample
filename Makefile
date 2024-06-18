@@ -21,7 +21,7 @@ lint:
 comma := ,
 breaking:
 	@echo "Detecting breaking changes in protobuf files..."
-	@$(call docker_run, breaking -v --against ../.git\#branch=master$(comma)subdir=defs, -w /proto/defs)
+	@$(call docker_run, breaking -v --against ../.git\#branch=main$(comma)subdir=defs, -w /proto/defs)
 
 ## Clean generated proto files
 clean:
