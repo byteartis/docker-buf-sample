@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package account.v1alpha1;
+
+service AccountService {
+  rpc Create(CreateRequest) returns (CreateResponse);
+}
+
+message CreateRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message CreateResponse {
+  string id = 1;
+}
