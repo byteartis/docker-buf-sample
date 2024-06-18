@@ -1,0 +1,14 @@
+{
+  "name": "byteartis/docker-buf-sample",
+  "require": {
+    "php": ">=7.3",
+    "grpc/grpc": "^1.15",
+    "google/protobuf": "^v3.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "byteartis\\docker-buf-sample\\": "gen/pb-php",
+      "": "gen/php"
+    }
+  }
+}

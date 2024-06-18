@@ -1,0 +1,28 @@
+{
+  "name": "@byteartis/docker-buf-sample",
+  "version": "0.0.1",
+  "description": "ByteArtis Docker Buf Sample",
+  "main": "index.js",
+  "files": [
+    "gen/js/*",
+    "defs/*"
+  ],
+  "scripts": {
+    "build": "make -s gen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteartis/docker-buf-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/byteartis/docker-buf-sample/issues"
+  },
+  "homepage": "https://github.com/byteartis/docker-buf-sample#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@grpc/grpc-js": "^1",
+    "google-protobuf": "^3"
+  }
+}
