@@ -8,7 +8,7 @@ define docker_run
 		--rm \
     -v $(shell pwd):/proto \
 		--platform linux/x86_64 \
-		byteartis/protobuf-rpcs:local \
+		byteartis/buf:latest \
 		$(1)
 endef
 
