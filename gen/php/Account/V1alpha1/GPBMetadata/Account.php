@@ -16,7 +16,7 @@ class Account
           return;
         }
         $pool->internalAddGeneratedFile(
-            "\x0A\xCA\x03\x0A\x1Eaccount/v1alpha1/account.proto\x12\x10account.v1alpha1\"A\x0A\x0DCreateRequest\x12\x14\x0A\x05email\x18\x01 \x01(\x09R\x05email\x12\x1A\x0A\x08password\x18\x02 \x01(\x09R\x08password\" \x0A\x0ECreateResponse\x12\x0E\x0A\x02id\x18\x01 \x01(\x09R\x02id2]\x0A\x0EAccountService\x12K\x0A\x06Create\x12\x1F.account.v1alpha1.CreateRequest\x1A .account.v1alpha1.CreateResponseB\xC9\x01\x0A\x14com.account.v1alpha1B\x0CAccountProtoP\x01ZBgithub.com/byteartir/proto/gen/go/account/v1alpha1;accountv1alpha1\xA2\x02\x03AXX\xAA\x02\x10Account.V1alpha1\xCA\x02\x10Account\\V1alpha1\xE2\x02\x1CAccount\\V1alpha1\\GPBMetadata\xEA\x02\x11Account::V1alpha1b\x06proto3"
+            "\x0A\xD6\x03\x0A\x1Eaccount/v1alpha1/account.proto\x12\x10account.v1alpha1\"A\x0A\x0DCreateRequest\x12\x14\x0A\x05email\x18\x01 \x01(\x09R\x05email\x12\x1A\x0A\x08password\x18\x02 \x01(\x09R\x08password\" \x0A\x0ECreateResponse\x12\x0E\x0A\x02id\x18\x01 \x01(\x09R\x02id2]\x0A\x0EAccountService\x12K\x0A\x06Create\x12\x1F.account.v1alpha1.CreateRequest\x1A .account.v1alpha1.CreateResponseB\xD5\x01\x0A\x14com.account.v1alpha1B\x0CAccountProtoP\x01ZNgithub.com/byteartis/docker-buf-sample/gen/go/account/v1alpha1;accountv1alpha1\xA2\x02\x03AXX\xAA\x02\x10Account.V1alpha1\xCA\x02\x10Account\\V1alpha1\xE2\x02\x1CAccount\\V1alpha1\\GPBMetadata\xEA\x02\x11Account::V1alpha1b\x06proto3"
         , true);
 
         static::$is_initialized = true;

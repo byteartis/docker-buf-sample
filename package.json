@@ -19,7 +19,9 @@
     "node": ">=20"
   },
   "peerDependencies": {
+    "google-protobuf": "^3",
+    "@bufbuild/protobuf": "^1",
     "@grpc/grpc-js": "^1",
-    "google-protobuf": "^3"
+    "@connectrpc/connect": "^1"
   }
 }

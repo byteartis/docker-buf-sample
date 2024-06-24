@@ -24,14 +24,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61\x63\x63ount/v1alpha1/account.proto\x12\x10\x61\x63\x63ount.v1alpha1\"A\n\rCreateRequest\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x02 \x01(\tR\x08password\" \n\x0e\x43reateResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id2]\n\x0e\x41\x63\x63ountService\x12K\n\x06\x43reate\x12\x1f.account.v1alpha1.CreateRequest\x1a .account.v1alpha1.CreateResponseB\xc9\x01\n\x14\x63om.account.v1alpha1B\x0c\x41\x63\x63ountProtoP\x01ZBgithub.com/byteartir/proto/gen/go/account/v1alpha1;accountv1alpha1\xa2\x02\x03\x41XX\xaa\x02\x10\x41\x63\x63ount.V1alpha1\xca\x02\x10\x41\x63\x63ount\\V1alpha1\xe2\x02\x1c\x41\x63\x63ount\\V1alpha1\\GPBMetadata\xea\x02\x11\x41\x63\x63ount::V1alpha1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61\x63\x63ount/v1alpha1/account.proto\x12\x10\x61\x63\x63ount.v1alpha1\"A\n\rCreateRequest\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x02 \x01(\tR\x08password\" \n\x0e\x43reateResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id2]\n\x0e\x41\x63\x63ountService\x12K\n\x06\x43reate\x12\x1f.account.v1alpha1.CreateRequest\x1a .account.v1alpha1.CreateResponseB\xd5\x01\n\x14\x63om.account.v1alpha1B\x0c\x41\x63\x63ountProtoP\x01ZNgithub.com/byteartis/docker-buf-sample/gen/go/account/v1alpha1;accountv1alpha1\xa2\x02\x03\x41XX\xaa\x02\x10\x41\x63\x63ount.V1alpha1\xca\x02\x10\x41\x63\x63ount\\V1alpha1\xe2\x02\x1c\x41\x63\x63ount\\V1alpha1\\GPBMetadata\xea\x02\x11\x41\x63\x63ount::V1alpha1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'account.v1alpha1.account_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'\n\024com.account.v1alpha1B\014AccountProtoP\001ZBgithub.com/byteartir/proto/gen/go/account/v1alpha1;accountv1alpha1\242\002\003AXX\252\002\020Account.V1alpha1\312\002\020Account\\V1alpha1\342\002\034Account\\V1alpha1\\GPBMetadata\352\002\021Account::V1alpha1'
+  _globals['DESCRIPTOR']._serialized_options = b'\n\024com.account.v1alpha1B\014AccountProtoP\001ZNgithub.com/byteartis/docker-buf-sample/gen/go/account/v1alpha1;accountv1alpha1\242\002\003AXX\252\002\020Account.V1alpha1\312\002\020Account\\V1alpha1\342\002\034Account\\V1alpha1\\GPBMetadata\352\002\021Account::V1alpha1'
   _globals['_CREATEREQUEST']._serialized_start=52
   _globals['_CREATEREQUEST']._serialized_end=117
   _globals['_CREATERESPONSE']._serialized_start=119
