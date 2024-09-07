@@ -91,8 +91,8 @@ proto.account.v1alpha1.CreateRequest.prototype.toObject = function(opt_includeIn
  */
 proto.account.v1alpha1.CreateRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    email: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    password: jspb.Message.getFieldWithDefault(msg, 2, "")
+email: jspb.Message.getFieldWithDefault(msg, 1, ""),
+password: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -251,7 +251,7 @@ proto.account.v1alpha1.CreateResponse.prototype.toObject = function(opt_includeI
  */
 proto.account.v1alpha1.CreateResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, "")
+id: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
