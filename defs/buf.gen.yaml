@@ -67,24 +67,15 @@ plugins:
   - local: protoc-gen-js
     out: ../gen/js/protobuf-connect
     opt: import_style=commonjs_strict,binary
-  - local: protoc-gen-connect-es
-    out: ../gen/js/protobuf-connect
 
   # Node+Web Javascript with Buf and Connect
   - local: protoc-gen-es
-    out: ../gen/es
-  - local: protoc-gen-connect-es
     out: ../gen/es
 
   # Node+Web TypeScript with Buf and Connect
   - local: protoc-gen-es
     out: ../gen/ts
     opt: target=ts
-  - local: protoc-gen-connect-es
-    out: ../gen/ts
-    opt:
-      - target=ts
-      - import_extension=none
 
   # Python with gRPC
   - protoc_builtin: python

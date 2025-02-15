@@ -41,4 +41,4 @@ var AccountServiceService = exports.AccountServiceService = {
   },
 };
 
-exports.AccountServiceClient = grpc.makeGenericClientConstructor(AccountServiceService);
+exports.AccountServiceClient = grpc.makeGenericClientConstructor(AccountServiceService, 'AccountService');

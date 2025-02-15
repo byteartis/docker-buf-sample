@@ -7,7 +7,6 @@ define docker_run
 	@docker run $(2) \
 		--rm \
     -v $(shell pwd):/proto \
-		--platform linux/x86_64 \
 		byteartis/buf:latest \
 		$(1)
 endef
@@ -32,4 +31,4 @@ clean:
 gen: clean
 	@echo "Generate proto files..."
 	@$(call docker_run, generate, -w /proto/defs)
-#	@$(call docker_run, , -w /proto --entrypoint=/proto/scripts/add_init.sh)
+	@$(call docker_run, , -w /proto --entrypoint=/proto/scripts/add_init.sh)
