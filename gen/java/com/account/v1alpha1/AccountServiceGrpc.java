@@ -61,6 +61,21 @@ public final class AccountServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AccountServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AccountServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AccountServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AccountServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AccountServiceBlockingStub newBlockingStub(
@@ -140,6 +155,30 @@ public final class AccountServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AccountService.
+   */
+  public static final class AccountServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AccountServiceBlockingV2Stub> {
+    private AccountServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AccountServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AccountServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.account.v1alpha1.CreateResponse create(com.account.v1alpha1.CreateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AccountService.
    */
   public static final class AccountServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AccountServiceBlockingStub> {

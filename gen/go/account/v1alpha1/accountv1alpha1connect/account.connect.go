@@ -37,12 +37,6 @@ const (
 	AccountServiceCreateProcedure = "/account.v1alpha1.AccountService/Create"
 )
 
-// These variables are the protoreflect.Descriptor objects for the RPCs defined in this package.
-var (
-	accountServiceServiceDescriptor      = v1alpha1.File_account_v1alpha1_account_proto.Services().ByName("AccountService")
-	accountServiceCreateMethodDescriptor = accountServiceServiceDescriptor.Methods().ByName("Create")
-)
-
 // AccountServiceClient is a client for the account.v1alpha1.AccountService service.
 type AccountServiceClient interface {
 	Create(context.Context, *connect.Request[v1alpha1.CreateRequest]) (*connect.Response[v1alpha1.CreateResponse], error)
@@ -57,11 +51,12 @@ type AccountServiceClient interface {
 // http://api.acme.com or https://acme.com/grpc).
 func NewAccountServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) AccountServiceClient {
 	baseURL = strings.TrimRight(baseURL, "/")
+	accountServiceMethods := v1alpha1.File_account_v1alpha1_account_proto.Services().ByName("AccountService").Methods()
 	return &accountServiceClient{
 		create: connect.NewClient[v1alpha1.CreateRequest, v1alpha1.CreateResponse](
 			httpClient,
 			baseURL+AccountServiceCreateProcedure,
-			connect.WithSchema(accountServiceCreateMethodDescriptor),
+			connect.WithSchema(accountServiceMethods.ByName("Create")),
 			connect.WithClientOptions(opts...),
 		),
 	}
@@ -88,10 +83,11 @@ type AccountServiceHandler interface {
 // By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
 // and JSON codecs. They also support gzip compression.
 func NewAccountServiceHandler(svc AccountServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	accountServiceMethods := v1alpha1.File_account_v1alpha1_account_proto.Services().ByName("AccountService").Methods()
 	accountServiceCreateHandler := connect.NewUnaryHandler(
 		AccountServiceCreateProcedure,
 		svc.Create,
-		connect.WithSchema(accountServiceCreateMethodDescriptor),
+		connect.WithSchema(accountServiceMethods.ByName("Create")),
 		connect.WithHandlerOptions(opts...),
 	)
 	return "/account.v1alpha1.AccountService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
